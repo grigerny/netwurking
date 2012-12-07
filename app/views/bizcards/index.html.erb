@@ -1,0 +1,21 @@
+<h1>Listing bizcards</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bizcards.each do |bizcard| %>
+  <tr>
+    <td><%= link_to 'Show', bizcard %></td>
+    <td><%= link_to 'Edit', edit_bizcard_path(bizcard) %></td>
+    <td><%= link_to 'Destroy', bizcard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bizcard', new_bizcard_path %>
