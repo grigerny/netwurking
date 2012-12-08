@@ -1,3 +1,3 @@
 class Bizcard < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :name, :bizname
 end
