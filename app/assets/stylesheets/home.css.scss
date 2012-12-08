@@ -11,7 +11,45 @@
 	color:#5FA092;
 }
 
-.section2{
+.dashboardmenuadd{
+	background-color:#5FA092;
+	height:50px;
+	width:140px;
+	margin-left:10px;
+}
+
+.dashboardmenuaddtext{
+	color:white;
+	font-size:18px;
+	text-align:center;	
+	padding:15px;
+}
+
+.woodsection{
 	background-color:#F3F7D9;
 	height:1200px;
+	background-image: image-url("retina_wood.png");
+}
+
+.bizcard{
+	background-image: image-url("white_wall.png");
+	margin-left:10px;
+	height:200px;
+	width:400px;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+}
+
+.bizcardname{
+	font-family:sans-serif;
+	font-size:36px;
+	text-align:center;
+	padding:20px;
+}
+
+.bizcardcompany{
+	font-family:sans-serif;
+	font-size:18px;
+	text-align:center;
 }
