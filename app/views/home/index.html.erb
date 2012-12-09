@@ -55,7 +55,7 @@
 				<br>
 				<div class="bizcard">
 					<div class="bizcardname">
-				
+					<%= current_user.Full_Name %>
 					</div>
 					<div class="bizcardcompany">
 					My Company
@@ -68,6 +68,7 @@
 			<br>
 			<div class="bizstackwrapper">
 			<% @bizcards.each do |bizcard| %> 
+			<% if current_user.id == bizcard.user_id %>
 				<div class="bizcardstack">
 					<div class="dateadded">
 					<%= bizcard.created_at.strftime("%a %b %d, %Y") %>
@@ -79,7 +80,8 @@
 					<%= bizcard.bizname %>
 					</div>	
 				</div>
-				<% end %>
+			<% end %>
+			<% end %>
 		
 
 			    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
