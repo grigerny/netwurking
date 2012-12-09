@@ -5,40 +5,99 @@
 
     <div class="span10">
       <div class="header">
-			The Future of <br>User Experience<br> #4.</div>
-			<div class="subheader">April 3-8, 2013</div>	
+			Netwurking
+			<div class="subheader">We make it easy.</div>	
       </div>
 	</div>
 </div>	
-<br><br><br><br><br>
+<br><br>
 
 <div class="row-fluid">
 <div class="span12">
 	<div class="dashboardmenuadd">
 		<div class="dashboardmenuaddtext">
-			+ Add Card
+			<%= link_to "+ Add Card", new_bizcard_path %>
 		</div>
 	</div>
 </div>		
 </div>		
 
-
 <div class="row-fluid">
-	<div class="span12">
-		<div class="woodsection">
-			<div class="span6">
+	<div class="woodsection">
+		<div class="span12">
+			
+			<div class="Dashboardheader">
+			My Dashboard
+			</div>
+			
+			<div class="searchbar">
+			<form class="search">
+			  <input type="text" class="search-query" placeholder="Search">
+			</form>
+			</div>
+
+<!-- Form to add card -->	
+						<div class="row-fluid">
+							<div class="span12">
+								<div class="span4 offset1">
+									<div class="addcardform">
+										<%= render 'bizcards/form' %>
+									</div>	
+								</div>				
+							</div>	
+						</div>
+<!-- Form to add card END -->
+<br><br>
+<!-- My card -->			
+			<div class="row-fluid">
+		
+			<div class="span4 offset1">
 				<br>
-			<h1>My Dashboard</h1>
 				<div class="bizcard">
 					<div class="bizcardname">
-					My Name
+					<%= current_user.email %>
 					</div>
 					<div class="bizcardcompany">
 					My Company
 					</div>	
 				</div>
-			
 			</div>	
+
+<!-- Stack of Cards -->
+			<div class="span4 offset2">
+			<br>
+			<div class="bizstackwrapper">
+			<% @bizcards.each do |bizcard| %> 
+				<div class="bizcardstack">
+					<div class="dateadded">
+					<%= bizcard.created_at.strftime("%a %b %d, %Y") %>
+					</div>	
+					<div class="bizcardname">
+					<%= bizcard.name %>
+					</div>
+					<div class="bizcardcompany">
+					<%= bizcard.bizname %>
+					</div>	
+				</div>
+				<% end %>
+		
+
+			    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+			    <script>
+			    $(function() {
+				 $( ".bizstackwrapper" ).sortable({
+				            revert: false
+				        });
+			   
+			        $( "ul, li" ).disableSelection();
+			    });
+			 	</script>
+			</div>
+			</div>
+		
+			</div>	
+	
+		
 		</div>
 	</div>
 </div>

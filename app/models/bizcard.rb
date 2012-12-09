@@ -1,3 +1,5 @@
 class Bizcard < ActiveRecord::Base
-  attr_accessible :name, :bizname
+  belongs_to :user
+  
+  attr_accessible :name, :bizname, :user_id
 end

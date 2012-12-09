@@ -44,7 +44,7 @@ class BizcardsController < ApplicationController
 
     respond_to do |format|
       if @bizcard.save
-        format.html { redirect_to @bizcard, notice: 'Bizcard was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Bizcard was successfully created.' }
         format.json { render json: @bizcard, status: :created, location: @bizcard }
       else
         format.html { render action: "new" }

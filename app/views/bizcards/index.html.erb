@@ -9,6 +9,8 @@
 
 <% @bizcards.each do |bizcard| %>
   <tr>
+	<%= bizcard.name %><br>
+	<%= bizcard.bizname %>
     <td><%= link_to 'Show', bizcard %></td>
     <td><%= link_to 'Edit', edit_bizcard_path(bizcard) %></td>
     <td><%= link_to 'Destroy', bizcard, method: :delete, data: { confirm: 'Are you sure?' } %></td>

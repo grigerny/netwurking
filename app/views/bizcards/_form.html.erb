@@ -1,5 +1,5 @@
-<%= form_for(@bizcard) do |f| %>
-  <% if @bizcard.errors.any? %>
+<%= form_for(Bizcard.new) do |f| %>
+  <% if Bizcard.new.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@bizcard.errors.count, "error") %> prohibited this bizcard from being saved:</h2>
 
@@ -11,7 +11,23 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+
+<div class="bizcardformwrapper">
+<div class="bizcardformtitle">		
+Name:
+</div>
+<%= f.text_field :name, :class => "abc", :placeholder => "First & Last" %>
+
+<div class="bizcardformtitle">	
+<br>	
+Occupation:
+</div>
+<%= f.text_field :bizname, :class => "abc", :placeholder => "Type of work" %>
+
+<div class="actions">
+<%= f.submit "Add Card", :class => "submitbutton"  %>
+</div>
+</div>
+
 <% end %>

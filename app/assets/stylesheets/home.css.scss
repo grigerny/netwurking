@@ -2,12 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .header{
-	font: 68px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	font: 50px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
 	color:#F3F7D9
 }
 
 .subheader{
-	font-size: 28px;
+	font-size: 18px;
 	color:#5FA092;
 }
 
@@ -16,6 +16,16 @@
 	height:50px;
 	width:140px;
 	margin-left:10px;
+}
+
+.dashboardmenuadd:hover{
+	background-color:#5FA092;
+	height:50px;
+	width:140px;
+	margin-left:10px;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
 }
 
 .dashboardmenuaddtext{
@@ -31,25 +41,56 @@
 	background-image: image-url("retina_wood.png");
 }
 
+.Dashboardheader{
+	padding:20px;
+	text-align:center;
+	font-size:35px;
+}
+
+.search{
+	text-align:center;
+	padding:20px;
+}
+
+.search-query{
+	width:50%;
+}
+
 .bizcard{
 	background-image: image-url("white_wall.png");
-	margin-left:10px;
 	height:200px;
-	width:400px;
+	width:100%;
 	-moz-box-shadow: 0 0 5px #888;
 	-webkit-box-shadow: 0 0 5px#888;
 	box-shadow: 0 0 5px #888;
 }
 
+.bizstackwrapper{
+	position:relative;
+}
+
+.bizcardstack{
+	position:relative;
+	background-image: image-url("white_wall.png");
+	height:200px;
+	width:100%;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+	margin-bottom:-140px;
+}
+
 .bizcardname{
 	font-family:sans-serif;
-	font-size:36px;
+	font-size:20px;
+	font-weight:bold;
 	text-align:center;
 	padding:20px;
 }
 
 .bizcardcompany{
 	font-family:sans-serif;
-	font-size:18px;
+	font-size:16px;
 	text-align:center;
 }
+
