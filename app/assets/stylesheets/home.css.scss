@@ -44,7 +44,7 @@
 .Dashboardheader{
 	padding:20px;
 	text-align:center;
-	font-size:35px;
+	font-size:32px;
 }
 
 .search{
@@ -54,6 +54,12 @@
 
 .search-query{
 	width:50%;
+}
+
+.bizcardheader{
+	padding:20px;
+	text-align:center;
+	font-size:32px;
 }
 
 .bizcard{
@@ -94,3 +100,8 @@
 	text-align:center;
 }
 
+.addbizcard{
+	background-color:white;
+	height:20px;
+	width:5%;
+}

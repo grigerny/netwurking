@@ -41,7 +41,7 @@ class BizcardsController < ApplicationController
   # POST /bizcards.json
   def create
     @bizcard = Bizcard.new(params[:bizcard])
-    @bizcard.user_id = current_user.id
+    @bizcard.relationships.build(:user_id => current_user.id)
 
     respond_to do |format|
       if @bizcard.save

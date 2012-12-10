@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :bizcards  
+  has_many :relationships
+  has_many :bizcards, :through => :relationships  
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,

@@ -43,6 +43,18 @@
 									<div class="addcardform">
 										<%= render 'bizcards/form' %>
 									</div>	
+								</div>
+								
+								<div class="span6">
+										<% @users.each do |user| %>
+										<% if user.id != current_user.id %>
+										<% user.full_name %>
+										<% end %>
+										<% end %>
+									
+							
+									
+										
 								</div>				
 							</div>	
 						</div>
@@ -53,6 +65,9 @@
 		
 			<div class="span4 offset1">
 				<br>
+				<div class="bizcardheader">
+				My Card	
+				</div>	
 				<div class="bizcard">
 					<div class="bizcardname">
 					<%= current_user.full_name %>
@@ -67,21 +82,23 @@
 			<div class="span4 offset2">
 			<br>
 			<div class="bizstackwrapper">
-			<% @bizcards.each do |bizcard| %> 
-			<% if current_user.id == bizcard.user_id %>
+				
+						
+						
+			<% current_user.relationships.each do |user| %>	
 				<div class="bizcardstack">
 					<div class="dateadded">
-					<%= bizcard.created_at.strftime("%a %b %d, %Y") %>
+					<%= user.bizcard.created_at.strftime("%a %b %d, %Y") %>
 					</div>	
 					<div class="bizcardname">
-					<%= bizcard.name %>
+					<%= user.bizcard.name %>
 					</div>
 					<div class="bizcardcompany">
-					<%= bizcard.bizname %>
+					<%= user.bizcard.bizname %>
 					</div>	
 				</div>
 			<% end %>
-			<% end %>
+	
 		
 
 			    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
