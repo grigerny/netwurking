@@ -63,7 +63,7 @@
 }
 
 .bizcard{
-	background-image: image-url("white_wall.png");
+
 	height:200px;
 	width:100%;
 	-moz-box-shadow: 0 0 5px #888;
@@ -71,6 +71,12 @@
 	box-shadow: 0 0 5px #888;
 }
 
+.changecolorbutton{
+	height:20px;
+	width:10%;
+	background-color:black;
+	
+}
 .bizstackwrapper{
 	position:relative;
 }
@@ -79,7 +85,7 @@
 	position:relative;
 	background-image: image-url("white_wall.png");
 	height:200px;
-	width:100%;
+	width:100%;	
 	-moz-box-shadow: 0 0 5px #888;
 	-webkit-box-shadow: 0 0 5px#888;
 	box-shadow: 0 0 5px #888;
