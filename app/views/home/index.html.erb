@@ -81,17 +81,15 @@
 					
 					<div class="bizcardname">
 					<%= current_user.full_name %>
+				
 					</div>
 					<div class="bizcardcompany">
 					Company
 					</div>
 				</div>
-				<button class="changecolorbutton">
-				</button>
+				Card Color:<%= best_in_place current_user, :cardbackground, :type => :select, :collection => [["BlueViolet", "Violet"], ["#00FFFF", "Aqua"], ["Red", "Red"], ["White", "White"]] %>
 			</div>	
-			
-			
-<%= current_user.cardbackground  %>
+
 <!-- Stack of Cards -->
 			<div class="span4 offset2">
 			<br>
@@ -109,9 +107,13 @@
 					</div>
 					<div class="bizcardcompany">
 					<%= user.bizcard.bizname %>
+					
 					</div>	
 				</div>
 			<% end %>
+			
+			
+	
 
 			    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 			    <script>
