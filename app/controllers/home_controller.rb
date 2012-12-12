@@ -4,4 +4,5 @@ class HomeController < ApplicationController
     @bizcards = Bizcard.all
     @users = User.all
   end
+  
 end

@@ -68,8 +68,17 @@
 				<div class="bizcardheader">
 				My Card	
 				</div>	
+				
 				<div class="bizcard">
-					<style>.bizcard {background-color:#C8CDDE}</style>
+					
+					<!-- Stores CSS for current User -->
+					<style>
+					.bizcard {
+						background-color: <%= "#{current_user.cardbackground}" %> 
+					}
+					</style>
+					<!-- Stores CSS for current User END -->
+					
 					<div class="bizcardname">
 					<%= current_user.full_name %>
 					</div>
@@ -80,7 +89,10 @@
 				<button class="changecolorbutton">
 				</button>
 			</div>	
+			
 
+			
+<%= current_user.cardbackground  %>
 <!-- Stack of Cards -->
 			<div class="span4 offset2">
 			<br>
