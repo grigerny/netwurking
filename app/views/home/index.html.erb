@@ -93,9 +93,7 @@
 					<a href="https://twitter.com/ecommerceboy" class="twitter-follow-button" data-show-count="false">Follow @ecommerceboy</a>
 					<script type="text/javascript" src="//platform.twitter.com/widgets.js">
 					</script>
-					
-					
-					
+
 				</div>
 				<br>Card Color:<%= best_in_place current_user, :cardbackground, :type => :select, :collection => [["BlueViolet", "Violet"], ["#00FFFF", "Aqua"], ["Red", "Red"], ["White", "White"]] %>
 	
@@ -140,7 +138,12 @@
 			</div>
 		
 		    </div>	
-	
+<!-- Stack of Cards End -->	
+
+<% current_user.friendships.each do |friendship| %>
+<%= friendship.user.full_name %>
+<%= link_to "remove", friendship, :method => :delete %>
+<% end %>
 		
 		</div>
 	</div>

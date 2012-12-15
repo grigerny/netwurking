@@ -4,7 +4,7 @@
 			
 <% @users.each do |user| %>
 	<%= user.full_name %><br>
-	
+	<%= link_to "Add Card", friendships_path(:friend_id => user), :method => :post %>
 	<% end %>
 	
 </div>	
