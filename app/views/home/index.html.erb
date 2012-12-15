@@ -73,11 +73,11 @@
 				Edit
 				</div>	
 				
-				<div class="bizcard">
+				<div class="CUbizcard">
 				<br>	
 					<!-- Stores CSS for current User -->
 					<style>
-					.bizcard {
+					.CUbizcard {
 						background-color: <%= "#{current_user.cardbackground}" %> 
 					}
 					</style>
@@ -99,12 +99,17 @@
 	
 			</div>	
 
-<!-- Stack of Cards -->
+<!-- Stack of Cards Title -->
 			<div class="span4 offset2">
 			<br>
 			<div class="bizcardheader">
 			Recent Cards
 			</div>
+<!-- Stack of Cards Title Ends -->			
+					
+<!-- Stack of Cards -->	
+
+<!-- Block to display self Entered Cards -->		
 			<div class="bizstackwrapper">
 			<% current_user.relationships.each do |user| %>	
 				<div class="bizcardstack">
@@ -116,14 +121,41 @@
 					</div>
 					<div class="bizcardcompany">
 					<%= user.bizcard.bizname %>
+					</div>
 					
-					</div>	
-				</div>
-			<% end %>
-			
-			
-	
+				</div>	
+			<% end %>	
+<!-- Block to display self Entered Cards Ends -->	
 
+<!-- Block to display friendship cards -->	
+				<% current_user.friendships.each do |friendship| %>
+				<div class="bizcardstack">
+					<div class="FRbizcard">
+						
+						<!-- Stores CSS for current User -->
+						<style>
+						.FRbizcard {
+							background-color: <%= "#{friendship.friend.cardbackground}" %> 
+						}
+						</style>
+						<!-- Stores CSS for current User END -->
+	
+				<i class="icon-remove"><%= link_to "remove", friendship, :method => :delete %><br></i>
+				
+					<div class="dateadded">
+					<%= friendship.created_at.strftime("%a %b %d, %Y") %>
+					</div>
+					<div class="bizcardname">
+					<%= friendship.friend.full_name %>
+					</div>
+					</div>
+				</div>
+			
+			<% end %>
+			</div>	
+<!-- Block to display friendship cards Ends-->
+			
+<!-- JQUERY for Card Movement -->				
 			    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 			    <script>
 			    $(function() {
@@ -138,13 +170,11 @@
 			</div>
 		
 		    </div>	
+<!-- JQUERY for Card Movement End -->	
+		
 <!-- Stack of Cards End -->	
 
-<% current_user.friendships.each do |friendship| %>
-<%= friendship.user.full_name %>
-<%= link_to "remove", friendship, :method => :delete %>
-<% end %>
-		
+
 		</div>
 	</div>
 </div>
