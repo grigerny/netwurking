@@ -67,10 +67,14 @@
 				<br>
 				<div class="bizcardheader">
 				My Card	
+				</div>
+				
+				<div class="editmycard">
+				Edit
 				</div>	
 				
 				<div class="bizcard">
-					
+				<br>	
 					<!-- Stores CSS for current User -->
 					<style>
 					.bizcard {
@@ -81,13 +85,20 @@
 					
 					<div class="bizcardname">
 					<%= current_user.full_name %>
-				
 					</div>
+					
 					<div class="bizcardcompany">
 					Company
 					</div>
+					<a href="https://twitter.com/ecommerceboy" class="twitter-follow-button" data-show-count="false">Follow @ecommerceboy</a>
+					<script type="text/javascript" src="//platform.twitter.com/widgets.js">
+					</script>
+					
+					
+					
 				</div>
-				Card Color:<%= best_in_place current_user, :cardbackground, :type => :select, :collection => [["BlueViolet", "Violet"], ["#00FFFF", "Aqua"], ["Red", "Red"], ["White", "White"]] %>
+				<br>Card Color:<%= best_in_place current_user, :cardbackground, :type => :select, :collection => [["BlueViolet", "Violet"], ["#00FFFF", "Aqua"], ["Red", "Red"], ["White", "White"]] %>
+	
 			</div>	
 
 <!-- Stack of Cards -->
