@@ -37,32 +37,29 @@
 			</div>
 
 <!-- Form to add card -->	
-						<div class="row-fluid">
-							<div class="span12">
-								<div class="span4 offset1">
-									<div class="addcardform">
-										<%= render 'bizcards/form' %>
-									</div>	
-								</div>
+			<div class="row-fluid">
+				<div class="span12">
+					
+					<div class="span4 offset1">
+						<div class="addcardform">
+						<%= render 'bizcards/form' %>
+						</div>	
+					</div>
 								
-								<div class="span6">
-										<% @users.each do |user| %>
-										<% if user.id != current_user.id %>
-										<% user.full_name %>
-										<% end %>
-										<% end %>
-									
-							
-									
-										
-								</div>				
-							</div>	
-						</div>
+				<div class="span6">
+						<% @users.each do |user| %>
+						<% if user.id != current_user.id %>
+						<% user.full_name %>
+						<% end %>
+						<% end %>
+				</div>
+								
+				</div>	
+			</div>
 <!-- Form to add card END -->
 <br><br>
 <!-- My card -->			
-			<div class="row-fluid">
-		
+		<div class="row-fluid">
 			<div class="span4 offset1">
 				<br>
 				<div class="bizcardheader">
@@ -73,11 +70,12 @@
 				Edit
 				</div>	
 				
-				<div class="CUbizcard">
+				<div class="MYbizcardborder">
+				<div class="MYbizcard">
 				<br>	
 					<!-- Stores CSS for current User -->
 					<style>
-					.CUbizcard {
+					.MYbizcard {
 						background-color: <%= "#{current_user.cardbackground}" %> 
 					}
 					</style>
@@ -95,9 +93,13 @@
 					</script>
 
 				</div>
-				<br>Card Color:<%= best_in_place current_user, :cardbackground, :type => :select, :collection => [["BlueViolet", "Violet"], ["#00FFFF", "Aqua"], ["Red", "Red"], ["White", "White"]] %>
+				</div>
+				
+				
+				<br>Card Color:
+				<%= best_in_place current_user, :cardbackground, :type => :select, :collection => [["BlueViolet", "Violet"], ["#00FFFF", "Aqua"], ["#D33039", "Red"], ["White", "White"]] %>
 	
-			</div>	
+			</div>
 
 <!-- Stack of Cards Title -->
 			<div class="span4 offset2">
@@ -111,25 +113,36 @@
 
 <!-- Block to display self Entered Cards -->		
 			<div class="bizstackwrapper">
-			<% current_user.relationships.each do |user| %>	
-				<div class="bizcardstack">
-					<div class="dateadded">
-					<%= user.bizcard.created_at.strftime("%a %b %d, %Y") %>
-					</div>	
-					<div class="bizcardname">
-					<%= user.bizcard.name %>
-					</div>
-					<div class="bizcardcompany">
-					<%= user.bizcard.bizname %>
-					</div>
-					
-				</div>	
-			<% end %>	
+				
+						<% current_user.relationships.each do |user| %>	
+					<div class="CUbizcardborder">
+							<div class="bizcardstack">
+								
+								<div class="dateadded">
+								<%= user.bizcard.created_at.strftime("%a %b %d, %Y") %>
+								</div>	
+								
+								<div class="bizcardname">
+								<%= user.bizcard.name %>
+								</div>
+								
+								<div class="bizcardcompany">
+								<%= user.bizcard.bizname %>
+								</div>
+							
+							
+							</div>
+						</div>
+						<% end %>	
+							
 <!-- Block to display self Entered Cards Ends -->	
 
 <!-- Block to display friendship cards -->	
+			
 				<% current_user.friendships.each do |friendship| %>
+			<div class="FRbizcardborder">
 				<div class="bizcardstack">
+					
 					<div class="FRbizcard">
 						
 						<!-- Stores CSS for current User -->
@@ -139,19 +152,26 @@
 						}
 						</style>
 						<!-- Stores CSS for current User END -->
-	
-				<i class="icon-remove"><%= link_to "remove", friendship, :method => :delete %><br></i>
-				
+
+					<div class="cardstackremove">
+					<%= link_to friendship, :method => :delete do %>
+				  	<i class="icon-remove"></i>
+					<% end %>
+					</div>
+					
 					<div class="dateadded">
 					<%= friendship.created_at.strftime("%a %b %d, %Y") %>
 					</div>
+					
 					<div class="bizcardname">
 					<%= friendship.friend.full_name %>
 					</div>
+
 					</div>
 				</div>
-			
+			</div>	
 			<% end %>
+			
 			</div>	
 <!-- Block to display friendship cards Ends-->
 			
@@ -167,9 +187,9 @@
 			    });
 			 	</script>
 			</div>
-			</div>
-		
-		    </div>	
+			
+		</div>
+
 <!-- JQUERY for Card Movement End -->	
 		
 <!-- Stack of Cards End -->	

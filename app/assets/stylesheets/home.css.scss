@@ -66,12 +66,38 @@
 	color:#2D2D2D;
 }
 
+.MYbizcard{
+	height:200px;
+	width:100%;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+}
+
+.MYbizcardborder{
+	background-color:#D3D3D3;
+	padding:5px;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+}
 .CUbizcard{
 	height:200px;
 	width:100%;
 	-moz-box-shadow: 0 0 5px #888;
 	-webkit-box-shadow: 0 0 5px#888;
 	box-shadow: 0 0 5px #888;
+}
+
+.CUbizcardborder{
+	position:relative;
+	background-color:#D3D3D3;
+	padding:5px;
+	height:200px;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+	margin-bottom:-140px;
 }
 
 .FRbizcard{
@@ -82,6 +108,16 @@
 	box-shadow: 0 0 5px #888;
 }
 
+.FRbizcardborder{
+	position:relative;
+	background-color:#D3D3D3;
+	padding:5px;
+	height:200px;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+	margin-bottom:-140px;	
+}
 .changecolorbutton{
 	height:20px;
 	width:10%;
@@ -90,6 +126,10 @@
 }
 .bizstackwrapper{
 	position:relative;
+}
+
+.cardstackremove{
+	float:right;
 }
 
 .bizcardstack{
@@ -102,6 +142,7 @@
 	box-shadow: 0 0 5px #888;
 	margin-bottom:-140px;
 }
+
 
 .bizcardname{
 	font-family:sans-serif;
