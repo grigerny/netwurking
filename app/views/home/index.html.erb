@@ -66,13 +66,14 @@
 				My Card	
 				</div>
 				
-				<div class="editmycard">
-				<%= link_to "Edit", edit_user_path(current_user) %>
-				</div>	
-				
 				<div class="MYbizcardborder">
 				<div class="MYbizcard">
-				<br>	
+					<div class="editmycard">
+					<%= link_to edit_user_path(current_user), :class => "editmycardclass" do %>
+					<i class="icon-edit"></i>
+					<% end %>
+					</div>
+					
 					<!-- Stores CSS for current User -->
 					<style>
 					.MYbizcard {

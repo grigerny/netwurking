@@ -20,6 +20,11 @@
 	padding-left:20px;
 }
 
+.formbackgroundcolortitle{
+	display:inline;
+	padding-left:20px;
+}
+
 .companyedit{	
   width:50%;
   font-size:18px !important;	
@@ -34,6 +39,7 @@
 }
 
 .twitteredit{
+  display:inline;
   width:50%;
   font-size:18px !important;	
   margin-top:9px;	
@@ -44,4 +50,25 @@
   border-bottom:1px dotted !important;
   box-shadow:none !important;
   border-radius: 0px !important;	
+}
+.colorselectwrapper{
+	padding:20px;
+}
+.violetcolor{
+	float:left;
+	height:60px;
+	width:60px;
+	background-color:violet;
+	border-style:none;
+	color:violet;
+}
+
+.bluecolor{
+	float:left;
+	height:60px;
+	width:60px;
+	background-color:#4793FA;
+	border-style:none;
+	color:#4793FA;
+		
 }
