@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.update_attributes(params[:user])
         
-        format.html { redirect_to(@user, :notice => 'User was successfully updated.') }
+        format.html { redirect_to(root_url, :notice => 'User was successfully updated.') }
         format.json { respond_with_bip(@user) }
       else
         format.html { render :action => "edit" }
@@ -26,4 +26,10 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
   end
+  
+  # GET /users/1/edit
+  def edit
+    @user = User.find(params[:id])
+  end
+  
 end

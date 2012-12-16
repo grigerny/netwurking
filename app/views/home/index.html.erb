@@ -67,7 +67,7 @@
 				</div>
 				
 				<div class="editmycard">
-				Edit
+				<%= link_to "Edit", edit_user_path(current_user) %>
 				</div>	
 				
 				<div class="MYbizcardborder">
@@ -86,11 +86,17 @@
 					</div>
 					
 					<div class="bizcardcompany">
-					Company
+					<%= current_user.company %>
 					</div>
-					<a href="https://twitter.com/ecommerceboy" class="twitter-follow-button" data-show-count="false">Follow @ecommerceboy</a>
+					
+					<% if current_user.twitter.blank? == false %>
+					<div class="twitter">
+						<br>
+				<a href="https://twitter.com/<%= "#{current_user.twitter}" %>" class="twitter-follow-button" data-show-count="false">Follow @<%= "#{current_user.twitter}"%></a>
 					<script type="text/javascript" src="//platform.twitter.com/widgets.js">
 					</script>
+					</div>
+					<% end %>
 
 				</div>
 				</div>
@@ -129,7 +135,7 @@
 								<div class="bizcardcompany">
 								<%= user.bizcard.bizname %>
 								</div>
-							
+									
 							
 							</div>
 						</div>
@@ -166,6 +172,20 @@
 					<div class="bizcardname">
 					<%= friendship.friend.full_name %>
 					</div>
+					
+					<div class="bizcardcompany">
+					<%= friendship.friend.company %>
+					</div>
+					
+					<% if friendship.friend.twitter.blank? == false %>
+					<div class="twitter">
+					<br>
+					<a href="https://twitter.com/<%= "#{friendship.friend.twitter}" %>" class="twitter-follow-button" data-show-count="false">Follow @<%= "#{friendship.friend.twitter}"%></a>
+					<script type="text/javascript" src="//platform.twitter.com/widgets.js">
+					</script>
+					</div>
+					<% end %>
+				
 
 					</div>
 				</div>

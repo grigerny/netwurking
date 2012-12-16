@@ -1,0 +1,62 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row-fluid">
+	<div class="woodsection">
+		<div class="span12">
+			
+	<div class="row-fluid">	
+			
+	<div class="span5 offset1">
+		<br>
+		<div class="bizcardheader">
+		Edit Your Card	
+		</div>
+		
+		<%= render "form" %>
+	</div>	
+	
+	<div class="span4 offset1">
+		<br>
+		<div class="bizcardheader">
+		My Card	
+		</div>	
+		
+		<div class="MYbizcardborder">
+		<div class="MYbizcard">
+			
+			<!-- Stores CSS for current User -->
+			<style>
+			.MYbizcard {
+				background-color: <%= "#{@user.cardbackground}" %> 
+			}
+			</style>
+			<!-- Stores CSS for current User END -->
+			
+			<div class="bizcardname">
+		<%= best_in_place @user, :full_name %>
+			</div>
+			
+			<div class="bizcardcompany">
+		<%= best_in_place @user, :company %> 
+<br>	<%= best_in_place @user, :cardbackground, :type => :input %>
+			</div>
+			
+	
+			<div class="twitter">
+			<a href="https://twitter.com/<%= "#{@user.twitter}" %>" class="twitter-follow-button" data-show-count="false">Follow @<%= "#{@user.twitter}"%></a>
+			<script type="text/javascript" src="//platform.twitter.com/widgets.js">
+			</script>
+			</div>
+
+			
+		</div>
+		</div>
+	
+	</div>
+	
+	</div>
+	
+	
+		</div>
+	</div>
+</div>	

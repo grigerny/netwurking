@@ -1,0 +1,41 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this bizcard from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+<div class="userformwrapper">
+
+<div class="userformtitle">		
+Name:
+</div>
+<%= f.text_field :full_name, :class => "abc", :placeholder => "First & Last" %>
+
+<div class="userformtitle">	
+<br>
+Company:
+</div>
+<%= f.text_field :company, :class => "companyedit", :placeholder => "Co. Name" %>
+
+<div class="userformtitle">
+<br>
+Twitter:
+</div>	
+<%= f.text_field :twitter, :class => "twitteredit", :placeholder => "Twitter Name" %>
+
+<div class="actions">
+<%= f.submit "Update", :class => "submitbutton"  %>
+</div>
+
+</div>
+
+<% end %>
