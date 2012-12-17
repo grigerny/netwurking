@@ -1,3 +1,9 @@
+
+	<div class="bizcardheadereditinfo">
+	Edit Info
+	</div>
+
+
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -30,41 +36,15 @@ Company:
 <br>
 Twitter:
 </div>	
-
-<div class="twitteredit">
-<%= best_in_place @user, :twitter%>
-</div>
+<%= f.text_field :twitter, :class => "twitteredit", :placeholder => "Twitter Name" %>
 	
-<br><br>
-<div class="formbackgroundcolortitle">
-Choose a Background Color	
-<br>
-</div>	
 
-<div class="colorselectwrapper">
-	
-<div class="violetcolor">
- <%= form_for @user do |t| %>
- <%= t.hidden_field :cardbackground, :value=>"violet" %>
- <%= t.submit "Update", :class => "violetcolor" %>
-<% end %>
-</div>	
-
-<div class="bluecolor">
-	 <%= form_for @user do |t| %>
-	 <%= t.hidden_field :cardbackground, :value=>"#4793FA" %>
-	 <%= t.submit "Update", :class =>"bluecolor" %>
-	<% end %>
-</div>
-
-</div>
-
-
-<br><br><br><br><br>
 <div class="actions">
 <%= f.submit "Update", :class => "submitbutton"  %>
 </div>
 
-</div>
 
 <% end %>
+
+</div>
+

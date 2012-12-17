@@ -20,10 +20,6 @@
 	padding-left:20px;
 }
 
-.formbackgroundcolortitle{
-	display:inline;
-	padding-left:20px;
-}
 
 .companyedit{	
   width:50%;
@@ -52,12 +48,11 @@
   border-radius: 0px !important;	
 }
 .colorselectwrapper{
-	padding:20px;
 }
 .violetcolor{
 	float:left;
 	height:60px;
-	width:60px;
+	width:20%;
 	background-color:violet;
 	border-style:none;
 	color:violet;
@@ -66,9 +61,81 @@
 .bluecolor{
 	float:left;
 	height:60px;
-	width:60px;
+	width:20%;
 	background-color:#4793FA;
 	border-style:none;
 	color:#4793FA;
 		
+}
+
+.greencolor{
+	float:left;
+	height:60px;
+	width:20%;
+	background-color:#2CCA9E;
+	border-style:none;
+	color:#2CCA9E;
+}
+
+.graycolor{
+	float:left;
+	height:60px;
+	width:20%;
+	background-color:#EDEDED;
+	border-style:none;
+	color:#EDEDED;
+}
+
+.yellowcolor{
+	float:left;
+	height:60px;
+	width:20%;
+	background-color:#F4F190;
+	border-style:none;
+	color:#F4F190;
+	
+}
+
+.coolpeachcolor{
+	float:left;
+	height:60px;
+	width:20%;
+	background-color:#FFEFE7;
+	border-style:none;
+	color:#FFEFE7;
+}
+.coolbluecolor{
+	float:left;
+	height:60px;
+	width:20%;
+	background-color:#86C7E9;
+	border-style:none;
+	color:#86C7E9;	
+}
+
+.coolgreencolor{
+	float:left;
+	height:60px;
+	width:20%;
+	background-color:#83C2BE;
+	border-style:none;
+	color:#83C2BE;
+}
+
+.coolwhitecolor{
+	float:left;
+	height:60px;
+	width:20%;
+	background-color:ghostwhite;
+	border-style:none;
+	color:ghostwhite;
+}
+
+.coolyellowcolor{
+	float:left;
+	height:60px;
+	width:20%;
+	background-color:#DFF1B5;
+	border-style:none;
+	color:#DFF1B5;
 }

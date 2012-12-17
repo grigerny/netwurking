@@ -1,0 +1,82 @@
+<div class="bizcardheaderchoosecolor">
+Choose Color
+</div>
+	
+<div class="colorselectwrapper">
+
+	<div class="violetcolor">
+ <%= form_for @user do |t| %>
+ <%= t.hidden_field :cardbackground, :value=>"violet" %>
+ <%= t.submit "Update", :class => "violetcolor" %>
+<% end %>
+</div>	
+
+	<div class="bluecolor">
+	 <%= form_for @user do |t| %>
+	 <%= t.hidden_field :cardbackground, :value=>"#4793FA" %>
+	 <%= t.submit "Update", :class =>"bluecolor" %>
+	<% end %>
+	</div>
+	
+	<div class="greencolor">
+	 <%= form_for @user do |t| %>
+	 <%= t.hidden_field :cardbackground, :value=>"#2CCA9E" %>
+	 <%= t.submit "Update", :class =>"greencolor" %>
+	<% end %>
+	</div>
+
+
+	<div class="graycolor">
+		<%= form_for @user do |t| %>
+		<%= t.hidden_field :cardbackground, :value=>"#EDEDED" %>
+		<%= t.submit "Update", :class =>"graycolor" %>
+		<% end %>
+	</div>
+	
+	<div class="yellowcolor">
+			<%= form_for @user do |t| %>
+			<%= t.hidden_field :cardbackground, :value=>"#F4F190" %>
+			<%= t.submit "Update", :class =>"yellowcolor" %>
+			<% end %>
+	</div>	
+
+</div>
+
+<div class="colorselectwrapper">
+		<div class="coolpeachcolor">
+	 <%= form_for @user do |t| %>
+	 <%= t.hidden_field :cardbackground, :value=>"#FFEFE7" %>
+	 <%= t.submit "Update", :class => "coolpeachcolor" %>
+	<% end %>
+	</div>	
+
+		<div class="coolbluecolor">
+		 <%= form_for @user do |t| %>
+		 <%= t.hidden_field :cardbackground, :value=>"#86C7E9" %>
+		 <%= t.submit "Update", :class =>"coolbluecolor" %>
+		<% end %>
+		</div>
+
+		<div class="coolgreencolor">
+		 <%= form_for @user do |t| %>
+		 <%= t.hidden_field :cardbackground, :value=>"#83C2BE" %>
+		 <%= t.submit "Update", :class =>"coolgreencolor" %>
+		<% end %>
+		</div>
+
+
+		<div class="coolwhitecolor">
+			<%= form_for @user do |t| %>
+			<%= t.hidden_field :cardbackground, :value=>"ghostwhite" %>
+			<%= t.submit "Update", :class =>"coolwhitecolor" %>
+			<% end %>
+		</div>
+
+		<div class="coolyellowcolor">
+				<%= form_for @user do |t| %>
+				<%= t.hidden_field :cardbackground, :value=>"#DFF1B5" %>
+				<%= t.submit "Update", :class =>"coolyellowcolor" %>
+				<% end %>
+		</div>	
+	
+</div>	

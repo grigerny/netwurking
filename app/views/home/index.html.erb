@@ -75,12 +75,14 @@
 					</div>
 					
 					<!-- Stores CSS for current User -->
+		
 					<style>
 					.MYbizcard {
-						background-color: <%= "#{current_user.cardbackground}" %> 
+						background-color: <%= "#{current_user.cardbackground}" %>; 
 					}
 					</style>
 					<!-- Stores CSS for current User END -->
+			
 					
 					<div class="bizcardname">
 					<%= current_user.full_name %>
@@ -101,11 +103,7 @@
 
 				</div>
 				</div>
-				
-				
-				<br>Card Color:
-				<%= best_in_place current_user, :cardbackground, :type => :select, :collection => [["BlueViolet", "Violet"], ["#00FFFF", "Aqua"], ["#D33039", "Red"], ["White", "White"]] %>
-	
+			
 			</div>
 
 <!-- Stack of Cards Title -->
