@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121217013326) do
+ActiveRecord::Schema.define(:version => 20121217034109) do
 
   create_table "bizcards", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20121217013326) do
     t.string   "company"
     t.string   "twitter"
     t.string   "cardbackgroundimage"
+    t.string   "token"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
