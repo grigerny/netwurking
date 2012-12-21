@@ -40,11 +40,13 @@
 			
 
 <br>
+		<% if @user.twitter != "" || nil %>
 			<div class="twitter">
 			<a href="https://twitter.com/<%= "#{@user.twitter}" %>" class="twitter-follow-button" data-show-count="false">Follow @<%= "#{@user.twitter}"%></a>
 			<script type="text/javascript" src="//platform.twitter.com/widgets.js">
 			</script>
 			</div>
+		<% end %>	
 				
 		</div>
 		</div>

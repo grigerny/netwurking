@@ -2,6 +2,75 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
+.signupwrapper{
+	text-align:center;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+	margin-top:50px;
+}
+
+.signuptop{
+  padding:10px;
+  text-align:center;
+  font-size:20px !important;	
+  background-color:#F7F7F7 !important;
+  color:#999999 !important;
+  outline: none !important;
+  border:none !important;
+  box-shadow:none !important;
+  border-radius: 0px !important;
+}
+
+.usersignupemail{
+  font-size:14px !important;		
+  background-color:#F7F7F7 !important;
+  color:#999999 !important;
+  outline: none !important;
+  border:none !important;
+  box-shadow:none !important;
+  border-radius: 0px !important;
+}
+
+.usersignupemail2{
+  width:80%;
+  height:40px !important;	
+  font-size:20px !important;	
+  margin-top:9px;	
+  background-color:white !important;
+  color:#999999 !important;
+  outline: none !important;
+  border:none !important;
+  box-shadow:none !important;
+  border-radius: 0px !important;	
+  -moz-box-shadow: inset 0 0 5px #888 !important;
+  -webkit-box-shadow: inset 0 0 5px#888 !important;
+  box-shadow: inner 0 0 5px #888  !important;
+}
+
+.usersignupsubmit{
+	position:relative;
+	background-color:black;
+	border:none;
+	color:white;
+	border-radius: 0px;	
+	width:80%!important;
+	height:40px;
+	margin: auto!important;
+}
+
+.usersignupsubmit:hover{
+	background-color:black;
+	border:none;
+	color:white;
+	border-radius: 0px;	
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+	
+}
 .userformwrapper{
 	position:relative;
 	background-color:black;
@@ -20,10 +89,22 @@
 	padding-left:20px;
 }
 
+.nameedit{	
+  width:40%;
+  font-size:14px !important;	
+  margin-top:9px;	
+  background-color:black !important;
+  color:#999999 !important;
+  outline: none;
+  border:none !important;
+  border-bottom:1px dotted !important;
+  box-shadow:none !important;
+  border-radius: 0px !important;
+}
 
-.companyedit{	
+.companyedit{
   width:50%;
-  font-size:18px !important;	
+  font-size:14px !important;	
   margin-top:9px;	
   background-color:black !important;
   color:#999999 !important;
@@ -37,7 +118,7 @@
 .twitteredit{
   display:inline;
   width:50%;
-  font-size:18px !important;	
+  font-size:14px !important;	
   margin-top:9px;	
   background-color:black !important;
   color:#999999 !important;
@@ -48,11 +129,12 @@
   border-radius: 0px !important;	
 }
 .colorselectwrapper{
+	width:100%;
 }
 .violetcolor{
 	float:left;
-	height:60px;
 	width:20%;
+	height:60px;
 	background-color:violet;
 	border-style:none;
 	color:violet;
@@ -60,8 +142,8 @@
 
 .bluecolor{
 	float:left;
-	height:60px;
 	width:20%;
+	height:60px;
 	background-color:#4793FA;
 	border-style:none;
 	color:#4793FA;
@@ -70,8 +152,8 @@
 
 .greencolor{
 	float:left;
-	height:60px;
 	width:20%;
+	height:60px;
 	background-color:#2CCA9E;
 	border-style:none;
 	color:#2CCA9E;
@@ -79,8 +161,8 @@
 
 .graycolor{
 	float:left;
-	height:60px;
 	width:20%;
+	height:60px;
 	background-color:#EDEDED;
 	border-style:none;
 	color:#EDEDED;
@@ -88,8 +170,8 @@
 
 .yellowcolor{
 	float:left;
-	height:60px;
 	width:20%;
+	height:60px;
 	background-color:#F4F190;
 	border-style:none;
 	color:#F4F190;
