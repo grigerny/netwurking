@@ -2,8 +2,8 @@
 Choose Token
 </div>
 
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
+<%= form_for(current_user) do |f| %>
+  <% if current_user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this bizcard from being saved:</h2>
 
@@ -17,7 +17,7 @@ Choose Token
 
 <div class="userformwrapper">
 
-
+<%= current_user.token %>
 
 <% end %>
 

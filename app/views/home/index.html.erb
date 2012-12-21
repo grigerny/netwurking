@@ -13,7 +13,7 @@
 <br><br>
 
 <div class="row-fluid">
-<div class="span12">
+<div class="span6">
 	<div class="dashboardmenuadd">
 		<div class="dashboardmenuaddtext">
 			<%= link_to "+ Add Card", new_bizcard_path %>
@@ -36,35 +36,25 @@
 			</form>
 			</div>
 
-<!-- Form to add card -->	
+
 			<div class="row-fluid">
 				<div class="span12">
-					
+<!-- My Token -->					
 					<div class="span4 offset1">
-						<div class="addcardform">
-						<%= render 'bizcards/form' %>
-						</div>	
+						<div class="mytoken">
+					<%= current_user.token %>
+						</div>
 					</div>
-								
-				<div class="span6">
-						<% @users.each do |user| %>
-						<% if user.id != current_user.id %>
-						<% user.full_name %>
-						<% end %>
-						<% end %>
-				</div>
+					
+<!-- MY Token Ends -->					
 								
 				</div>	
 			</div>
-<!-- Form to add card END -->
-<br><br>
+
 <!-- My card -->			
 		<div class="row-fluid">
 			<div class="span4 offset1">
 				<br>
-				<div class="bizcardheader">
-				My Card	
-				</div>
 				
 				<div class="MYbizcardborder">
 				<div class="MYbizcard">

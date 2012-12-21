@@ -12,5 +12,16 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :username, :email, :password, :password_confirmation, :remember_me, :full_name, :cardbackground, :twitter, :company, :cardbackgroundimage, :token
+
+  before_create :generate_token
+
+  protected
+
+  def generate_token
+    begin
+      token = SecureRandom.hex(3)
+    end while User.where(:token => token).exists?
+    self.token = token
+  end
   
 end
