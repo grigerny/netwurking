@@ -1,11 +1,12 @@
+
 <div class="bizcardheaderchoosecolor">
 Choose Color
 </div>
-	
-	
-<div class="colorselectwrapper">
 
-	<div class="violetcolor">
+<div class="colorselectwrapper">
+<div class="row-fluid">
+	
+<div class="violetcolor">
  <%= form_for @user do |t| %>
  <%= t.hidden_field :cardbackground, :value=>"violet" %>
  <%= t.submit "Update", :class => "violetcolor" %>
@@ -26,7 +27,6 @@ Choose Color
 	<% end %>
 	</div>
 
-
 	<div class="graycolor">
 		<%= form_for @user do |t| %>
 		<%= t.hidden_field :cardbackground, :value=>"#EDEDED" %>
@@ -43,8 +43,8 @@ Choose Color
 
 </div>
 
-<div class="colorselectwrapper">
-		<div class="coolpeachcolor">
+<div class="row-fluid">
+	<div class="coolpeachcolor">
 	 <%= form_for @user do |t| %>
 	 <%= t.hidden_field :cardbackground, :value=>"#FFEFE7" %>
 	 <%= t.submit "Update", :class => "coolpeachcolor" %>
@@ -79,5 +79,5 @@ Choose Color
 				<%= t.submit "Update", :class =>"coolyellowcolor" %>
 				<% end %>
 		</div>	
-	
 </div>	
+</div>
