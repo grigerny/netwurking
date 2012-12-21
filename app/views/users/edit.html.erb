@@ -33,6 +33,10 @@
 			<div class="bizcardcompany">
 		<%= @user.company %>
 			</div>
+			
+			<div class="bizcardtitle">
+		<%= @user.title %>
+			</div>
 <br>
 		<% if @user.twitter.blank? == false %>
 			<div class="twitter">
@@ -41,6 +45,10 @@
 			</script>
 			</div>
 		<% end %>	
+		
+		<div class="address">
+					<%= current_user.address %>	<%= current_user.address2 %> <%= current_user.city %> <%= current_user.state %> <%= current_user.zip %>
+		</div>	
 				
 		</div>
 		</div>
@@ -50,7 +58,7 @@
 	</div>
 	
 	<div class="row-fluid">
-		<div class="span5 offset1">
+		<div class="span10 offset1">
 		<%= render "form" %>
 		</div>
 	</div>

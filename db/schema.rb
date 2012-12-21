@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121221195015) do
+ActiveRecord::Schema.define(:version => 20121221201244) do
 
   create_table "bizcards", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(:version => 20121221195015) do
     t.string   "state"
     t.string   "zip"
     t.string   "country"
+    t.string   "title"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -1,7 +1,4 @@
 
-	<div class="bizcardheadereditinfo">
-	Edit Info
-	</div>
 
 
 <%= form_for(@user) do |f| %>
@@ -19,25 +16,106 @@
 
 
 
+
+   <script>
+    $(function() {
+        $( "#accordion" ).accordion({
+            collapsible: true, active: false
+        });
+    });
+    </script>
+
+
+<div id="accordion">
+    <div class="bizcardheadereditinfo">
+	<i class="icon-arrow-down"></i> Click to edit
+	</div>
+    <div>
+        
 <div class="userformwrapper">
+	
 
-<div class="userformtitle">		
-Name:
+<div class="row-fluid">
+<div class="span2">
+Name:	
 </div>
+<div class="span8">
 <%= f.text_field :full_name, :class => "nameedit", :placeholder => "First & Last" %>
+</div>
+</div>
 
-<div class="userformtitle">	
-<br>
+<div class="row-fluid">
+<div class="span2">	
 Company:
 </div>
+<div class="span8">
 <%= f.text_field :company, :class => "companyedit", :placeholder => "Co. Name" %>
+</div>
+</div>
 
-<div class="userformtitle">
-<br>
-Twitter:
+<div class="row-fluid">
+<div class="span2">
+Title:	
+</div>		
+<div class="span8">
+<%= f.text_field :title, :class => "titleedit", :placeholder => "Position/Title" %>
 </div>	
+</div>	
+
+
+<div class="row-fluid">
+<div class="span2">	
+Address 1:
+</div>
+<div class="span8">
+<%= f.text_field :address, :class => "genericedit", :placeholder => "Address" %>
+</div>
+</div>
+
+<div class="row-fluid">
+<div class="span2">
+Address 2:
+</div>	
+<div class="span8">
+<%= f.text_field :address2, :class => "genericedit", :placeholder => "Address 2" %>
+</div>
+</div>
+
+<div class="row-fluid">
+<div class="span2">
+City:
+</div>	
+<div class="span8">	
+<%= f.text_field :city, :class => "cityedit", :placeholder => "City" %>
+</div>
+</div>
+
+<div class="row-fluid">
+<div class="span2">
+State:
+</div>	
+<div class="span8">
+<%= f.text_field :state, :class => "stateedit", :placeholder => "State" %>
+</div>
+</div>
+
+<div class="row-fluid">
+<div class="span2">
+Zip:
+</div>	
+<div class="span8">	
+<%= f.text_field :zip, :class => "zipedit", :placeholder => "Zip" %>
+</div>
+</div>
+
+<div class="row-fluid">
+<div class="span2">
+@Twitter:
+</div>
+<div class="span8">	
 <%= f.text_field :twitter, :class => "twitteredit", :placeholder => "Twitter Name" %>
-	
+</div>
+</div>
 
 <div class="actions">
 <%= f.submit "Update", :class => "submitbutton"  %>
@@ -46,5 +124,8 @@ Twitter:
 
 <% end %>
 
+</div>
+
+    </div>
 </div>
 

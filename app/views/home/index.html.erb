@@ -82,6 +82,10 @@
 					<%= current_user.company %>
 					</div>
 					
+					<div class="bizcardtitle">
+					<%= current_user.title %>
+					</div>	
+					
 					<% if current_user.twitter.blank? == false %>
 					<div class="twitter">
 						<br>
@@ -90,6 +94,10 @@
 					</script>
 					</div>
 					<% end %>
+					
+					<div class="address">
+					<%= current_user.address %>	<%= current_user.address2 %> <%= current_user.city %> <%= current_user.state %> <%= current_user.zip %>
+					</div>	
 
 				</div>
 				</div>
