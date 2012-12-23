@@ -2,10 +2,23 @@
 	<div class="woodsection">
 		<div class="span12">
 			
+				<form class="search">
+				<%= search_form_for @search do |f| %>
+				 <input type="text" class="search-query" placeholder="Search"><br>
+				<%= f.text_field :token_start %>
+				<div class="actions">
+				<%= f.submit %>
+				</div>
+
+			
+			
 <% @users.each do |user| %>
 	<%= user.full_name %><br>
 	<%= link_to "Add Card", friendships_path(:friend_id => user), :method => :post %><br>
 	<% end %>
+	
+		<% end %>
+		</form>
 	
 </div>	
 </div>	

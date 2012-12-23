@@ -11,45 +11,40 @@
 	color:#5FA092;
 }
 
-.dashboardmenuadd{
-	background-color:#5FA092;
-	height:50px;
-	width:140px;
-	margin-left:10px;
-}
-
-.dashboardmenuadd:hover{
-	background-color:#5FA092;
-	height:50px;
-	width:140px;
-	margin-left:10px;
-	-moz-box-shadow: 0 0 5px #888;
-	-webkit-box-shadow: 0 0 5px#888;
-	box-shadow: 0 0 5px #888;
-}
-
-.dashboardmenuaddtext{
-	color:white;
-	font-size:18px;
-	text-align:center;	
-	padding:15px;
-}
 
 .woodsection{
-	background-color:#F3F7D9;
 	height:1200px;
-	background-image: image-url("retina_wood.png");
+	background-color:#F4F8F9;
+	-moz-box-shadow: 0 0 1px 1px #888;
+	-webkit-box-shadow: 0 0 1px 1px#888;
+	box-shadow: 0 0 1px 1px #888;
 }
 
 .Dashboardheader{
 	padding:20px;
 	text-align:center;
 	font-size:32px;
+	color:#A3AFB5;
 }
 
 .search{
 	text-align:center;
 	padding:20px;
+}
+.searchbarwrapper{
+}
+.searchbar{
+	border:5px solid #F7FBFC !important;
+	background-color:#DEEBF1 !important;
+	width:50%;
+	height:30px;
+	-moz-box-shadow: inset 0 0 2px #888 !important;
+	-webkit-box-shadow: inset 0 0 2px#888 !important;
+	box-shadow: inner 0 0 2px #888 !important;
+	border-radius:10px !important;
+	-moz-box-shadow: 0 0 2px #888 !important;
+	-webkit-box-shadow: 0 0 2px#888 !important;
+	box-shadow: 0 0 2px #888 !important;
 }
 
 .search-query{
@@ -57,15 +52,16 @@
 }
 
 .mytoken{
-	background-color:white;
 	font-size:28px;
 	text-align:center;
 	padding:20px;
-	color:black;
-	-moz-box-shadow: 0 0 5px #888;
-	-webkit-box-shadow: 0 0 5px#888;
-	box-shadow: 0 0 5px #888;
+	color:white;
+	background-color:#363D46;
+	-moz-box-shadow: 0 0 2px #888 !important;
+	-webkit-box-shadow: 0 0 2px#888 !important;
+	box-shadow: 0 0 2px #888 !important;
 }
+
 .bizcardheaderchoosecolor{
 	padding:20px;
 	text-align:center;
@@ -93,12 +89,18 @@
 
 .editmycard{
 	font-size:14px;
-	float:right;
+	float:left;
+	margin-left:4px;
 }
 
-.editmycardclass:visited{
-      color: black;
+
+.addmycard{
+	font-size:14px;
+	float:left;
+	margin-top:-15px;
+	margin-left:4px;
 }
+
 
 .MYbizcard{
 	height:200px;
@@ -144,12 +146,7 @@
 
 .FRbizcardborder{
 	position:relative;
-	background-color:#D3D3D3;
-	padding:5px;
 	height:200px;
-	-moz-box-shadow: 0 0 5px #888;
-	-webkit-box-shadow: 0 0 5px#888;
-	box-shadow: 0 0 5px #888;
 	margin-bottom:-140px;	
 }
 .changecolorbutton{
@@ -167,13 +164,8 @@
 }
 
 .bizcardstack{
-	position:relative;
-	background-image: image-url("white_wall.png");
 	height:200px;
 	width:100%;	
-	-moz-box-shadow: 0 0 5px #888;
-	-webkit-box-shadow: 0 0 5px#888;
-	box-shadow: 0 0 5px #888;
 	margin-bottom:-140px;
 }
 
@@ -195,7 +187,7 @@
 .bizcardtitle{
 	padding:3px;
 	text-align:center;
-	font-size:14px;
+	font-size:12px;
 }
 .twitter{
 	text-align:center;
@@ -213,3 +205,9 @@
 	height:20px;
 	width:5%;
 }
+
+.dateadded{
+	color:#A3AFB5;
+	font-size:10px;
+}
+

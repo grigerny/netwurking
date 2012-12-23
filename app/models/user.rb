@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
   has_many :friendships
-  has_many :friends, :through => :friendships
+  has_many :friends, :through => :friendships, :dependent => :destroy
   has_many :relationships
-  has_many :bizcards, :through => :relationships  
+  has_many :bizcards, :through => :relationships, :dependent => :destroy
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
